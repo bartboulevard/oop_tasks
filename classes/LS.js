@@ -23,4 +23,20 @@ class LS {
         // log to console that task is added to LS
         task.addedToLS();
     }
+
+    // delete task from LS
+    deleteTask(task){
+        let tasks = this.getData('tasks');
+        tasks.forEach(function(tasksElement, tasksIndex){
+            if(tasksElement.name === task){
+                tasks.splice(tasksIndex, 1);
+            }
+        });
+        this.setData('tasks', tasks);
+    }
+
+    // delete all tasks from LS
+    deleteTasks(){
+        localStorage.clear();
+    }
 }
