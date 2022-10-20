@@ -4,7 +4,7 @@ ls = new LS();
 
 // event elements
 const form = document.querySelector('form');
-const task = document.querySelector('#task');
+const taskInput = document.querySelector('#task');
 
 // events
 // form submit event
